@@ -30,6 +30,12 @@ unittest1: unittest1.c dominion.o rngs.o testHelper.o
 unittest2: unittest2.c dominion.o rngs.o testHelper.o
 	gcc -o unittest2 -g unittest2.c dominion.o rngs.o testHelper.o $(CFLAGS)
 
+unittest3: unittest3.c dominion.o rngs.o testHelper.o
+	gcc -o unittest3 -g unittest3.c dominion.o rngs.o testHelper.o $(CFLAGS)
+
+unittest4: unittest4.c dominion.o rngs.o testHelper.o
+	gcc -o unittest4 -g unittest4.c dominion.o rngs.o testHelper.o $(CFLAGS)
+
 interface.o: interface.h interface.c
 	gcc -c interface.c -g  $(CFLAGS)
 

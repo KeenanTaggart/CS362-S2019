@@ -20,7 +20,7 @@
 int main() {
   struct gameState g, test_g;
   int players = 3, current_player = 0, seed = 50, handPos = 0, choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
-  int nextPlayer = 1, lastPlayer = 2;  // Performs tribute effect
+  int nextPlayer = 1, lastPlayer = 2;  // 'next' performs tribute effect, 'last' does not
   int supply_set[10] = {adventurer, council_room, feast, gardens, smithy, mine, remodel, village, baron, great_hall};
 
   initializeGame(players, supply_set, seed, &g);
