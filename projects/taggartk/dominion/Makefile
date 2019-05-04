@@ -21,6 +21,15 @@ testBuyCard: testDrawCard.c dominion.o rngs.o
 testAll: dominion.o testSuite.c
 	gcc -o testSuite testSuite.c -g  dominion.o rngs.o $(CFLAGS)
 
+testHelper.o: testHelper.h testHelper.c
+	gcc -c testHelper.c -g $(CFLAGS)
+
+unittest1: unittest1.c dominion.o rngs.o testHelper.o
+	gcc -o unittest1 -g unittest1.c dominion.o rngs.o testHelper.o $(CFLAGS)
+
+unittest2: unittest2.c dominion.o rngs.o testHelper.o
+	gcc -o unittest2 -g unittest2.c dominion.o rngs.o testHelper.o $(CFLAGS)
+
 interface.o: interface.h interface.c
 	gcc -c interface.c -g  $(CFLAGS)
 
