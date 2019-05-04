@@ -36,6 +36,15 @@ unittest3: unittest3.c dominion.o rngs.o testHelper.o
 unittest4: unittest4.c dominion.o rngs.o testHelper.o
 	gcc -o unittest4 -g unittest4.c dominion.o rngs.o testHelper.o $(CFLAGS)
 
+cardtest1: cardtest1.c dominion.o rngs.o testHelper.o
+	gcc -o cardtest1 -g cardtest1.c dominion.o rngs.o testHelper.o $(CFLAGS)
+
+cardtest2: cardtest2.c dominion.o rngs.o testHelper.o
+	gcc -o cardtest2 -g cardtest2.c dominion.o rngs.o testHelper.o $(CFLAGS)
+
+cardtest3: cardtest3.c dominion.o rngs.o testHelper.o
+	gcc -o cardtest3 -g cardtest3.c dominion.o rngs.o testHelper.o $(CFLAGS)
+
 interface.o: interface.h interface.c
 	gcc -c interface.c -g  $(CFLAGS)
 
