@@ -5,14 +5,21 @@
 
 char inputChar()
 {
-    // TODO: rewrite this function
-    return ' ';
+    char pool[] = "[({ ax})]bcdefghijklmnopqrstuvwyz";
+    return pool[rand() % 33];
 }
 
 char *inputString()
 {
-    // TODO: rewrite this function
-    return "";
+    char pool[] = "abcdefghijklmnopqrstuvwxyz";
+    int i, stringsz = 5;
+    char *result = malloc(sizeof (char) * (stringsz + 1));
+
+    for (i = 0; i < stringsz; i++) {
+      result[i] = pool[rand() % 26]; 
+    }
+    result[stringsz] = '\0';
+    return result;
 }
 
 void testme()
@@ -45,6 +52,7 @@ void testme()
       printf("error ");
       exit(200);
     }
+    free(s);                          /* I added this to avoid memory leaks */
   }
 }
 
