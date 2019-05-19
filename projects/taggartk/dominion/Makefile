@@ -32,6 +32,8 @@ runtests: testDrawCard
 randomtestcard1: randomtestcard1.c dominion.o rngs.o testHelper.o
 	gcc -o randomtestcard1 -g randomtestcard1.c dominion.o rngs.o testHelper.o $(CFLAGS)
 
+randomtestcard2: randomtestcard2.c dominion.o rngs.o testHelper.o
+	gcc -o randomtestcard2 -g randomtestcard2.c dominion.o rngs.o testHelper.o $(CFLAGS)
 
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
