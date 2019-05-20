@@ -87,11 +87,8 @@ int main() {
       g.discardCount[j] = test_g.discardCount[j] = r_discardsize;
 
       randDeck(g.hand[j], r_handsize, deck_seed_set);
-      // randDeck(test_g.hand[j], r_handsize, deck_seed_set);
       randDeck(g.deck[j], r_decksize, deck_seed_set);
-      // randDeck(test_g.deck[j], r_decksize, deck_seed_set);
       randDeck(g.discard[j], r_discardsize, deck_seed_set);
-      // randDeck(test_g.discard[j], r_discardsize, deck_seed_set);
     }
     memcpy(&test_g, &g, sizeof(struct gameState));
     // We play all the Treasure Maps in hand
