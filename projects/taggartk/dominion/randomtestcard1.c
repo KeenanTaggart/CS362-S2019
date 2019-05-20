@@ -62,7 +62,10 @@ int main() {
       randDeck(g.discard[j], r_discardsize, supply_set);
       randDeck(test_g.discard[j], r_discardsize, supply_set);
     }
-    r_playedtimes = (rand() % r_handsize) + 1;                   // Playing more cards than are in hand leads to bad results 
+    if (r_handsize == 0)
+      r_playedtimes = 0;
+    else
+      r_playedtimes = (rand() % r_handsize) + 1;                   // Playing more cards than are in hand leads to bad results 
     printf("%d players, %d cards in hand, %d cards in deck, %d cards in discard\n", players, r_handsize, r_decksize, r_discardsize);
     printf("Playing smithy %d times!\n", r_playedtimes);
 
