@@ -33,7 +33,7 @@ int main() {
   int i, j, k, l;
 
   int players, r_handsize, r_decksize, r_discardsize, r_playedtimes; 
-  int end_handsz, end_decksz, end_discardsz;
+  int end_handsz;
   srand(time(0));
   printf("\n---------- RANDOM TESTS: Smithy ----------\n\n");
   

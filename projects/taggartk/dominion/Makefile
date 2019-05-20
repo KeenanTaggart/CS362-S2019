@@ -39,6 +39,7 @@ randomtestadventurer: randomtestadventurer.c dominion.o rngs.o testHelper.o
 	gcc -o randomtestadventurer -g randomtestadventurer.c dominion.o rngs.o testHelper.o $(CFLAGS)
 
 randomtestresults: randomtestcard1 randomtestcard2 randomtestadventurer dominion.o testHelper.o
+	rm -f randomtestresults.out
 	./randomtestcard1 >> randomtestresults.out
 	./randomtestcard2 >> randomtestresults.out
 	./randomtestadventurer >> randomtestresults.out

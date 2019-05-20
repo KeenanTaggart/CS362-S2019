@@ -54,7 +54,7 @@ int main() {
   int i, j, k, l;
 
   int players, r_handsize, r_decksize, r_discardsize, r_playedtimes;
-  int end_handsz, end_decksz, end_discardsz, total_treasures;
+  int end_handsz, total_treasures;
   srand(time(0));
   printf("\n---------- RANDOM TESTS: Adventurer ----------\n\n");
 

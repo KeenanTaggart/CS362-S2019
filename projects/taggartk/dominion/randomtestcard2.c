@@ -55,14 +55,14 @@ int numGolds(int deck[], int sz) {
 
 int main() {
   struct gameState g, test_g;
-  int current_player = 0, seed = 100, handPos = 0, choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
+  int current_player = 0, seed = 100, /*handPos = 0,*/ choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
   int supply_set[10] = {adventurer, council_room, feast, gardens, smithy, mine, remodel, village, baron, treasure_map};
   int deck_seed_set[11] = {adventurer, council_room, feast, gardens, smithy, mine, remodel, village, baron, treasure_map, gold};
 
   int i, j, k, l;
 
-  int players, r_handsize, r_decksize, r_discardsize, r_playedtimes, r_golds;
-  int end_handsz, end_decksz, end_discardsz, end_gold;
+  int players, r_handsize, r_decksize, r_discardsize, r_playedtimes;
+  int end_gold;
   int mapsInHand;
   srand(time(0));
   printf("\n---------- RANDOM TESTS: Treasure Map ----------\n\n");
