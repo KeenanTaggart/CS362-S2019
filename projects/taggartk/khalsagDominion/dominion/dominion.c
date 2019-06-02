@@ -671,7 +671,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
     {
     case adventurer:
 
-        return playAdventurer(currentPlayer, state);
+        return playAdventurer(currentPlayer, state, handPos);
 
     case council_room:
       //+4 Cards
@@ -1315,7 +1315,7 @@ int playSmithy(int currentPlayer, struct gameState *state, int handPos)
 }
 
 //end of dominion.c
-int playAdventurer(int currentPlayer, struct gameState *state) {
+int playAdventurer(int currentPlayer, struct gameState *state, int handPos) {
 
   int z=0;
   int temphand[MAX_HAND];// moved above the if statement
@@ -1342,6 +1342,7 @@ int playAdventurer(int currentPlayer, struct gameState *state) {
 	state->discard[currentPlayer][state->discardCount[currentPlayer]++]=temphand[z-1]; // discard all cards in play that have been drawn
 	z=z-1;
       }
+      discardCard(handPos, currentPlayer, state, 0);
       return 0;
 
 }
