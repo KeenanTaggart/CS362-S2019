@@ -1306,8 +1306,9 @@ int playSmithy(int currentPlayer, struct gameState *state, int handPos)
   }
 			
   //discard card from hand
-  //discardCard(handPos, currentPlayer, state, 0);
-  discardCard(handPos, currentPlayer, state, TRASHFLAG); // BUG - set to 1
+  // Bug fixed for Assignment 5
+  discardCard(handPos, currentPlayer, state, 0);
+  // discardCard(handPos, currentPlayer, state, TRASHFLAG); // BUG - set to 1
   return 0;
 }
 
