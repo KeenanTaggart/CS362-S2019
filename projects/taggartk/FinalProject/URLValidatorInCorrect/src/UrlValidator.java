@@ -285,7 +285,11 @@ public class UrlValidator implements Serializable {
             allowedSchemes = new HashSet<String>(schemes.length);
             
             for(int i=0; i < schemes.length+1; i++) {
-            	allowedSchemes.add(schemes[i-1].toLowerCase(Locale.ENGLISH));
+            	// Source of Bug #2 -- incorrect array indexing
+            	// allowedSchemes.add(schemes[i-1].toLowerCase(Locale.ENGLISH));
+            	
+            	// Proper indexing should start at i=0
+            	allowedSchemes.add(schemes[i].toLowerCase(Locale.ENGLISH));
             }
         }
 
