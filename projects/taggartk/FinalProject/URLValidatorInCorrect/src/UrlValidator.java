@@ -279,15 +279,17 @@ public class UrlValidator implements Serializable {
             
             // Source of Bug #1 -- incorrect initialization size
             // allowedSchemes = new HashSet<String>(-1);
-            
             // The proper initialization size should be enough to hold all of the schemes
             // that were passed as parameters -- ergo the size of the schemes array
             allowedSchemes = new HashSet<String>(schemes.length);
             
-            for(int i=0; i < schemes.length+1; i++) {
+            // Source of Bug #3 -- incorrect loop logic
+            // for(int i=0; i < schemes.length+1; i++) {
+            // Loop should only run for the length of schemes
+            for(int i=0; i < schemes.length; i++) {
+            	
             	// Source of Bug #2 -- incorrect array indexing
             	// allowedSchemes.add(schemes[i-1].toLowerCase(Locale.ENGLISH));
-            	
             	// Proper indexing should start at i=0
             	allowedSchemes.add(schemes[i].toLowerCase(Locale.ENGLISH));
             }
