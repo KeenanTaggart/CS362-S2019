@@ -271,7 +271,9 @@ public class UrlValidator implements Serializable {
 
         if (isOn(ALLOW_ALL_SCHEMES)) {
         	allowedSchemes = new HashSet<String>(0);
-        	allowedSchemes.add(schemes[0].toLowerCase(Locale.ENGLISH));
+        	
+        	// Source of Bug #6 -- referencing array without checking size
+        	// allowedSchemes.add(schemes[0].toLowerCase(Locale.ENGLISH));
         } else {
             if (schemes == null) {
                 schemes = DEFAULT_SCHEMES;
